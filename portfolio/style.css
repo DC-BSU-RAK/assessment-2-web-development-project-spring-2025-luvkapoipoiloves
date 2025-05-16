@@ -1,0 +1,378 @@
+/* ===== Base Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #1e1e2f; /* ✅ Solid dark blue (from About page) */
+  color: #fff;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+.bg-video-full {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  object-fit: cover;
+  opacity: 0.2; /* Adjust for readability */
+  pointer-events: none;
+}
+
+
+/* ===== Global Styles ===== */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00ffe1;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  font-weight: 500;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background: #00ffe1;
+  color: #111;
+  transform: scale(1.05);
+}
+
+/* ===== Hero Section ===== */
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.7;
+}
+
+.hero-section {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  text-align: center;
+  color: #fff;
+  padding: 2rem;
+}
+.hero-section {
+  background: url('') no-repeat center center/cover;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 30, 47, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  padding: 2rem;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  animation: fadeInDown 1.2s ease-out;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #ddd;
+  animation: fadeInUp 1.4s ease-out;
+}
+
+.btn {
+  background: #00ffe1;
+  color: #111;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 255, 225, 0.3);
+}
+
+.btn:hover {
+  background: #00cfc0;
+  transform: translateY(-2px);
+}
+
+/* ===== Portfolio Gallery ===== */
+.portfolio-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  padding: 3rem;
+}
+
+/* ===== Portfolio Item ===== */
+.portfolio-item {
+  background: #1e1e30;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 255, 225, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+}
+
+.item-info {
+  padding: 1rem;
+}
+
+.item-info h2 {
+  color: #00ffe1;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.item-info p {
+  text-align: justify;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.item-info a {
+  font-size: 0.95rem;
+  color: #00008b;
+}
+/* ===== Showreel Section ===== */
+.showreel-section {
+  padding: 2rem;
+  max-width: 1810px;
+  margin: 0 auto;
+}
+
+.showreel-section h2 {
+  font-size: 2rem;
+  color: #00ffe1;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  text-align: center; /* ✅ Center heading */
+}
+
+.showreel-section p {
+  font-size: 1rem;
+  color: #ccc;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  text-align: center; /* ✅ Center paragraph */
+}
+
+.showreel-section a { 
+  font-size: 1rem;
+  color: #00ffe1;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  text-align: center; /* ✅ Center paragraph */
+}
+
+.showreel-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  gap: 10rem;
+  margin-top: 2rem;
+  justify-items: center;
+}
+
+.showreel-grid video:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(0, 255, 225, 0.3);
+}
+
+/* ===== Portfolio Item Media: Flatter Tiles ===== */
+.portfolio-item img,
+.portfolio-item video,
+.showreel-grid video {
+  width: 100%;
+  aspect-ratio: 16 / 9;  /* Lower, flatter rectangle */
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #00ffe1;
+  box-shadow: 0 0 15px rgba(0, 255, 225, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item img:hover,
+.portfolio-item video:hover,
+.showreel-grid video:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(0, 255, 225, 0.3);
+}
+
+.showreel-item {
+  width: 100%;
+  aspect-ratio: 4 / 3 ;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ===== Video Styling ===== */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border: 2px solid #00ffe1;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 255, 225, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.video-wrapper:hover video {
+  transform: scale(1.02);
+}
+
+/* ===== Hover Description Overlay ===== */
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 10px;
+}
+
+.video-wrapper:hover .video-overlay {
+  opacity: 1;
+}
+
+.video-overlay p {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.video-overlay a {
+  color: #00ffe1;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.video-overlay a:hover {
+  text-decoration: underline;
+}
+
+.hover-play {
+  transition: transform 0.3s ease;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #111;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

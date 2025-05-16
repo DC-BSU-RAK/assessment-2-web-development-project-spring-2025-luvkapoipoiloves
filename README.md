@@ -1,2 +1,2 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/vOLoQzLP) 
-Testing
+# luvkapoipoiloves.github.io
+The student's task is to build an interactive website using web technologies. For this project, they will apply the various techniques explored throughout the module to demonstrate their understanding and ability to implement them effectively. As part of the assessment, the student must choose a theme for the website and create it based on that theme.
